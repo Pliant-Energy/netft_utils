@@ -89,7 +89,7 @@ hardware_interface::return_type NetFTHardwareInterface::read(
     ft_driver_->getData(wrench);
   }
 
-  hw_sensor_states_.at(0) = wrench.wrench.force.x;
+  hw_sensor_states_.at(0) = 0*wrench.wrench.force.x;
   hw_sensor_states_.at(1) = wrench.wrench.force.y;
   hw_sensor_states_.at(2) = wrench.wrench.force.z;
   hw_sensor_states_.at(3) = wrench.wrench.torque.x;
