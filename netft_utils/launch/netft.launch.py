@@ -61,9 +61,18 @@ def launch_setup(context, *args, **kwargs):
         output="screen",
     )
 
+    robot_state_publisher_node = Node(
+        package="robot_state_publisher",
+        executable="robot_state_publisher",
+        output="both",
+        parameters=[robot_description],
+    )
+
     nodes_to_start = [
         control_node,
-        ft_broadcaster]
+        ft_broadcaster, 
+        robot_state_publisher_node
+    ]
 
     return nodes_to_start
 

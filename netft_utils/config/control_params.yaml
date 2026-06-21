@@ -1,6 +1,6 @@
 $(var node_namespace)controller_manager:
   ros__parameters:
-    update_rate: 500  # Hz
+    update_rate: 100  # Hz
 
     force_torque_sensor_broadcaster:
       type: force_torque_sensor_broadcaster/ForceTorqueSensorBroadcaster

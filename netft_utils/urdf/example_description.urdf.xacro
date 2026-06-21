@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://wiki.ros.org/xacro" name="han">
-
+  <xacro:arg name="ip_address" default="192.168.137.170"/>
   <xacro:include filename="$(find netft_utils)/urdf/ros2_control.xacro"/>
 
   <!-- Make a simple cylinder for the sensor -->
@@ -26,6 +26,6 @@
   </link>
 
   <!-- Add ros2_control information -->
-  <xacro:netft_sensor_ros2_control name="netft_sensor" ip_address="192.168.1.12"/>
+  <xacro:netft_sensor_ros2_control name="netft_sensor" ip_address="$(arg ip_address)"/>
 
 </robot>
