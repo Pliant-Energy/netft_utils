@@ -26,6 +26,6 @@
   </link>
 
   <!-- Add ros2_control information -->
-  <xacro:netft_sensor_ros2_control name="netft_sensor" ip_address="192.168.1.12"/>
+  <xacro:netft_sensor_ros2_control name="netft_sensor" ip_address="192.168.137.170"/>
 
 </robot>
